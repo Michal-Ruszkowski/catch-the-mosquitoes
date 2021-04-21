@@ -1,0 +1,443 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Open Sans', sans-serif, Arial;
+	font-size:20px;
+	color:#ff7300;
+    background: linear-gradient(60deg, rgba(255,115,0,1) 0%, rgba(85,85,85,1) 15%, rgba(0,0,0,1) 100%) fixed center;
+}
+
+#container {
+    width: 100vw;
+    height:100vh;
+    display:flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#game{
+    position:relative;
+    height:300px;
+    width:200px;
+    overflow: hidden;
+    background-color: black;
+}
+
+#game:hover{
+    box-shadow: 0px 0px 23px 8px #ff7300;
+    cursor:pointer;
+}
+
+#catch-the-mosquitoes{
+    position: absolute;
+    left:-15%;
+    top:0;
+    height:90%
+}
+
+figcaption{
+    position: absolute;
+    bottom:10%;
+    left: 50%;
+    transform:translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    -o-transform:translateX(-50%);
+}
+
+#titleGame{
+	width:100vw;
+	text-align:center;
+	font-size:40px;
+	padding:0;
+    margin:0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.reload{
+	font-size:30px;
+	text-transform:uppercase;
+	cursor:pointer;
+	color:#3366ff;
+    margin:50px;
+    line-height: 2.4;
+}
+
+.reload:hover{
+	color:#668cff;
+}
+
+#stopwatch{
+    font-size: 30px;
+    color:#3366ff;
+    margin:0 calc(10vw - 15px) 0px 5px;
+    float:right;
+}
+
+#countdown{
+    font-size: 60vh;
+    text-align: center;
+}
+
+#hi-score{
+    margin-left:calc(10vw - 15px);
+}
+
+#result, #inputNumber, #howManyTries, #retry-or-back, #newRecord{
+    text-align: center;
+    margin:20px;
+}
+
+#room{
+    background-image: url(images/room.jpg);
+    background-position: center;
+    background-size:cover;
+    position:relative;
+    width: 100vw;
+    height:100vh;
+}
+#howManyMosquitoes{
+    margin-left:calc(10vw - 15px);
+}
+
+.mosquitos{
+    position: absolute;
+    background-image:url(images/mosquito.png);
+    background-size:contain;
+    cursor: pointer;
+    width:30px;
+    height:30px;
+}
+
+#mosquito1{
+    top:10%;
+    left:10%;
+    -webkit-animation: mosquito1Move 10s linear infinite;
+    animation: mosquito1Move 10s linear infinite;
+}
+
+#mosquito2{
+    top:10%;
+    left:90%;
+    -webkit-animation: mosquito2Move 10s linear infinite;
+    animation: mosquito2Move 10s linear infinite;
+}
+
+#mosquito3{
+    top:90%;
+    left:10%;
+    -webkit-animation: mosquito3Move 10s linear infinite;
+    animation: mosquito3Move 10s linear infinite;
+}
+
+#mosquito4{
+    top:90%;
+    left:90%;
+    -webkit-animation: mosquito4Move 10s linear infinite;
+    animation: mosquito4Move 10s linear infinite;
+}
+
+#mosquito5{
+    top:45%;
+    left:30%;
+    -webkit-animation: mosquito5Move 10s linear infinite;
+    animation: mosquito5Move 10s linear infinite;
+}
+
+#mosquito6{
+    top:60%;
+    left:70%;
+    -webkit-animation: mosquito6Move 10s linear infinite;
+    animation: mosquito6Move 10s linear infinite;
+}
+
+#mosquito7{
+    top:80%;
+    left:55%;
+    -webkit-animation: mosquito7Move 10s linear infinite;
+    animation: mosquito7Move 10s linear infinite;
+}
+
+#mosquito8{
+    top:25%;
+    left:70%;
+    -webkit-animation: mosquito8Move 10s linear infinite;
+    animation: mosquito8Move 10s linear infinite;
+}
+
+#mosquito9{
+    top:40%;
+    left:50%;
+    -webkit-animation: mosquito9Move 10s linear infinite;
+    animation: mosquito9Move 10s linear infinite;
+}
+
+#mosquito10{
+    top:70%;
+    left:30%;
+    -webkit-animation: mosquito10Move 10s linear infinite;
+    animation: mosquito10Move 10s linear infinite;
+}
+
+@-webkit-keyframes mosquito1Move{
+    0% {top:10%; left:10%}
+    10% {top:10%; left:20%}
+    20% {top:20%; left:30%}
+    30% {top:30%; left:20%}
+    40% {top:30%; left:30%}
+    50% {top:40%; left:20%}
+    60% {top:50%; left:30%}
+    70% {top:40%; left:20%}
+    80% {top:30%; left:10%}
+    90% {top:20%; left:20%}
+    100% {top:10%; left:10%}
+}
+
+@keyframes mosquito1Move{
+    0% {top:10%; left:10%}
+    10% {top:10%; left:20%}
+    20% {top:20%; left:30%}
+    30% {top:30%; left:20%}
+    40% {top:30%; left:30%}
+    50% {top:40%; left:20%}
+    60% {top:50%; left:30%}
+    70% {top:40%; left:20%}
+    80% {top:30%; left:10%}
+    90% {top:20%; left:20%}
+    100% {top:10%; left:10%}
+}
+
+@-webkit-keyframes mosquito2Move{
+    0% {top:10%; left:90%}
+    12% {top:12%; left:70%}
+    22% {top:30%; left:55%}
+    32% {top:45%; left:30%}
+    42% {top:30%; left:10%}
+    52% {top:25%; left:20%}
+    62% {top:10%; left:40%}
+    72% {top:15%; left:45%}
+    82% {top:25%; left:65%}
+    93% {top:15%; left:80%}
+    100% {top:10%; left:90%}
+}
+
+@keyframes mosquito2Move{
+    0% {top:10%; left:90%}
+    12% {top:12%; left:70%}
+    22% {top:30%; left:55%}
+    32% {top:45%; left:30%}
+    42% {top:30%; left:10%}
+    52% {top:25%; left:20%}
+    62% {top:10%; left:40%}
+    72% {top:15%; left:45%}
+    82% {top:25%; left:65%}
+    93% {top:15%; left:80%}
+    100% {top:10%; left:90%}
+}
+
+@-webkit-keyframes mosquito3Move{
+    0% {top:90%; left:10%}
+    18% {top:90%; left:25%}
+    32% {top:85%; left:40%}
+    46% {top:60%; left:60%}
+    60% {top:45%; left:50%}
+    70% {top:60%; left:35%}
+    80% {top:70%; left:35%}
+    90% {top:80%; left:20%}
+    100% {top:90%; left:10%}
+}
+
+@keyframes mosquito3Move{
+    0% {top:90%; left:10%}
+    18% {top:90%; left:25%}
+    32% {top:85%; left:40%}
+    46% {top:60%; left:60%}
+    60% {top:45%; left:50%}
+    70% {top:60%; left:35%}
+    80% {top:70%; left:35%}
+    90% {top:80%; left:20%}
+    100% {top:90%; left:10%}
+}
+
+@-webkit-keyframes mosquito4Move{
+    0% {top:90%; left:90%}
+    10% {top:80%; left:90%}
+    20% {top:70%; left:85%}
+    30% {top:65%; left:70%}
+    40% {top:60%; left:55%}
+    50% {top:65%; left:40%}
+    60% {top:75%; left:55%}
+    70% {top:75%; left:70%}
+    80% {top:85%; left:75%}
+    90% {top:90%; left:85%}
+    100% {top:90%; left:90%}
+}
+
+@keyframes mosquito4Move{
+    0% {top:90%; left:90%}
+    10% {top:80%; left:90%}
+    20% {top:70%; left:85%}
+    30% {top:65%; left:70%}
+    40% {top:60%; left:55%}
+    50% {top:65%; left:40%}
+    60% {top:75%; left:55%}
+    70% {top:75%; left:70%}
+    80% {top:85%; left:75%}
+    90% {top:90%; left:85%}
+    100% {top:90%; left:90%}
+}
+
+@-webkit-keyframes mosquito5Move{
+    0% {top:45%; left:30%}
+    10% {top:30%; left:30%}
+    20% {top:15%; left:40%}
+    30% {top:10%; left:40%}
+    40% {top:25%; left:50%}
+    50% {top:40%; left:60%}
+    60% {top:55%; left:70%}
+    70% {top:70%; left:55%}
+    80% {top:70%; left:40%}
+    90% {top:55%; left:30%}
+    100% {top:45%; left:30%}
+}
+
+@keyframes mosquito5Move{
+    0% {top:45%; left:30%}
+    10% {top:30%; left:30%}
+    20% {top:15%; left:40%}
+    30% {top:10%; left:40%}
+    40% {top:25%; left:50%}
+    50% {top:40%; left:60%}
+    60% {top:55%; left:70%}
+    70% {top:70%; left:55%}
+    80% {top:70%; left:40%}
+    90% {top:55%; left:30%}
+    100% {top:45%; left:30%}
+}
+
+@-webkit-keyframes mosquito6Move{
+    0% {top:60%; left:70%}
+    16% {top:50%; left:90%}
+    32% {top:40%; left:70%}
+    48% {top:30%; left:90%}
+    66% {top:20%; left:70%}
+    74% {top:10%; left:90%}
+    92% {top:35%; left:80%}
+    100% {top:60%; left:70%}
+}
+
+@keyframes mosquito6Move{
+    0% {top:60%; left:70%}
+    16% {top:50%; left:90%}
+    32% {top:40%; left:70%}
+    48% {top:30%; left:90%}
+    66% {top:20%; left:70%}
+    74% {top:10%; left:90%}
+    92% {top:35%; left:80%}
+    100% {top:60%; left:70%}
+}
+
+@-webkit-keyframes mosquito7Move{
+    0% {top:80%; left:55%}
+    11% {top:90%; left:45%}
+    22% {top:80%; left:35%}
+    33% {top:60%; left:25%}
+    44% {top:80%; left:15%}
+    55% {top:60%; left:20%}
+    66% {top:50%; left:30%}
+    77% {top:60%; left:40%}
+    88% {top:70%; left:50%}
+    100% {top:80%; left:55%}
+}
+
+@keyframes mosquito7Move{
+    0% {top:80%; left:55%}
+    11% {top:90%; left:45%}
+    22% {top:80%; left:35%}
+    33% {top:60%; left:25%}
+    44% {top:80%; left:15%}
+    55% {top:60%; left:20%}
+    66% {top:50%; left:30%}
+    77% {top:60%; left:40%}
+    88% {top:70%; left:50%}
+    100% {top:80%; left:55%}
+}
+
+@-webkit-keyframes mosquito8Move{
+    0% {top:25%; left:70%}
+    14% {top:35%; left:55%}
+    28% {top:45%; left:30%}
+    42% {top:60%; left:20%}
+    56% {top:70%; left:30%}
+    60% {top:70%; left:45%}
+    74% {top:50%; left:55%}
+    88% {top:40%; left:70%}
+    100% {top:25%; left:70%}
+}
+
+@keyframes mosquito8Move{
+    0% {top:25%; left:70%}
+    14% {top:35%; left:55%}
+    28% {top:45%; left:30%}
+    42% {top:60%; left:20%}
+    56% {top:70%; left:30%}
+    60% {top:70%; left:45%}
+    74% {top:50%; left:55%}
+    88% {top:40%; left:70%}
+    100% {top:25%; left:70%}
+}
+
+@-webkit-keyframes mosquito9Move{
+    0% {top:40%; left:50%}
+    15% {top:20%; left:50%}
+    30% {top:20%; left:70%}
+    45% {top:30%; left:70%}
+    60% {top:30%; left:90%}
+    75% {top:40%; left:90%}
+    90% {top:20%; left:70%}
+    100% {top:40%; left:50%}
+}
+
+@keyframes mosquito9Move{
+    0% {top:40%; left:50%}
+    15% {top:20%; left:50%}
+    30% {top:20%; left:70%}
+    45% {top:30%; left:70%}
+    60% {top:30%; left:90%}
+    75% {top:40%; left:90%}
+    90% {top:20%; left:70%}
+    100% {top:40%; left:50%}
+}
+
+@-webkit-keyframes mosquito10Move{
+    0% {top:70%; left:30%}
+    10% {top:80%; left:20%}
+    20% {top:90%; left:10%}
+    30% {top:80%; left:10%}
+    40% {top:70%; left:10%}
+    50% {top:60%; left:10%}
+    60% {top:50%; left:20%}
+    70% {top:40%; left:30%}
+    80% {top:50%; left:10%}
+    90% {top:60%; left:20%}
+    100% {top:70%; left:30%}
+}
+
+@keyframes mosquito10Move{
+    0% {top:70%; left:30%}
+    10% {top:80%; left:20%}
+    20% {top:90%; left:10%}
+    30% {top:80%; left:10%}
+    40% {top:70%; left:10%}
+    50% {top:60%; left:10%}
+    60% {top:50%; left:20%}
+    70% {top:40%; left:30%}
+    80% {top:50%; left:10%}
+    90% {top:60%; left:20%}
+    100% {top:70%; left:30%}
+}
